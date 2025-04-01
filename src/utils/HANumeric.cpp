@@ -65,14 +65,14 @@ HANumeric::HANumeric(const int16_t value, const uint8_t precision):
     _isSet(true),
     _precision(precision)
 {
-    _value = value * static_cast<int32_t>(getPrecisionBase());
+    _value = static_cast<int64_t>(value) * static_cast<int32_t>(getPrecisionBase());
 }
 
 HANumeric::HANumeric(const int32_t value, const uint8_t precision):
     _isSet(true),
     _precision(precision)
 {
-    _value = value * static_cast<int32_t>(getPrecisionBase());
+    _value = static_cast<int64_t>(value) * static_cast<int32_t>(getPrecisionBase());
 }
 
 HANumeric::HANumeric(const uint8_t value, const uint8_t precision):
@@ -86,14 +86,14 @@ HANumeric::HANumeric(const uint16_t value, const uint8_t precision):
     _isSet(true),
     _precision(precision)
 {
-    _value = value * getPrecisionBase();
+    _value = static_cast<int64_t>(value) * getPrecisionBase();
 }
 
 HANumeric::HANumeric(const uint32_t value, const uint8_t precision):
     _isSet(true),
     _precision(precision)
 {
-    _value = value * getPrecisionBase();
+    _value = static_cast<int64_t>(value) * getPrecisionBase();
 }
 
 #ifdef ARDUINOHA_INT_OVERLOAD
