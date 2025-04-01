@@ -196,7 +196,7 @@ uint8_t HASelect::countOptionsInString(const char* options) const
         return 0;
     }
 
-    for (uint8_t i = 0; i < optionsLen; i++) {
+    for (uint16_t i = 0; i < optionsLen; i++) {
         if (options[i] == ';') {
             optionsNb++;
         }

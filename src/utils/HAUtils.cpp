@@ -28,7 +28,7 @@ void HAUtils::byteArrayToStr(
     const uint16_t length
 )
 {
-    for (uint8_t i = 0; i < length; i++) {
+    for (uint16_t i = 0; i < length; i++) {
         dst[i*2] = pgm_read_byte(&HAHexMap[((char)src[i] & 0XF0) >> 4]);
         dst[i*2+1] = pgm_read_byte(&HAHexMap[((char)src[i] & 0x0F)]);
     }
